@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
+    <title>vue tut</title>
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
@@ -10,10 +10,35 @@
   </head>
   <body>
     <div id="app">
-      <h1>Product goes here</h1>
+      <h1>{{ product }}</h1>
+      <!-- Solution -->
+
+      <!-- image -->
+      
+      <p>{{ description }}</p>
+      <div class="product-image">
+        <img v-bind:src="image">
+        <a :href=url>vue tutorials</a>
+        <!-- <p v-if>in stock</p> -->
+        <!-- <p v-else>out stock</p> -->
+        <p v-show=instock>in stock</p>
+        <p v-if ="inventory >19">sufficient</p>
+        <p v-else>few</p>
+
+      </div>
+   
+      
+      <!-- Solution -->
     </div>
 
-    <!-- Import Js -->
+
+
+    <!-- Import App -->
     <script src="./main.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
   </body>
 </html>
